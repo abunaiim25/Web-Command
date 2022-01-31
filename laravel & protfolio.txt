@@ -1,0 +1,22 @@
+# composer require laravel/ui
+php artisan ui vue --auth
+AppServiceProvider ----use Illuminate\Support\Facades\Schema; Schema::defaultStringLength(191);
+
+#php artisan route:list
+
+#storage/img/bc_img.jpg
+php artisan storage:link --- DB->storage/img/bc_img.jpg
+
+# php artisan make:controller MainPagesController --resource
+
+//message
+#php artisan make:mail ContactFormMail --markdown    =contact.contact-form
+--env-->change
+--form---google---pvedprtprvcacqfo
+--php artisan cache:clear
+--php artisan config:clear
+
+# protected $redirectTo = '/admin/dashboard';
+
+#'!]y;YUC6@w+B7k--password---heroku
+# captain2746!

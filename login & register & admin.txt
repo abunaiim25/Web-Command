@@ -1,0 +1,71 @@
+==========  Hospital Project have all things for these commend  ==========
+
+
+#=> cmd project create
+php -v
+composer -v
+composer create-project laravel/laravel name
+cd eshop
+php artisan --version
+#VS code
+cd name
+php artisan serve
+
+#=> Login && Register && Admin
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+npm install (node.Js will be install)
+npm install laravel-mix@latest --save-dev
+npm run dev
+database\migrations\2014_10_12_000000_create_users_table.php
+migrate
+app\Actions\Fortify\CreateNewUser.php
+app\Models\User.php
+app\Providers\RouteServiceProvider.php -> public const HOME = '/home';
+route -> Route::get('/home',[HomeController::class,'redirect']);
+app\Http\Controllers\HomeController.php
+resources\views\dashboard.blade.php
+resources\views\admin\home.blade.php
+resources\views\navigation-menu.blade.php
+resources\views\layouts\app.blade.php
+
+#=> Template
+User:
+public -> frontend template push in public (public\front\assets)
+Route::get('/',[HomeController::class,'index']);
+app\Http\Controllers\HomeController.php -> index
+resources\views\user\home.blade.php -> login & Registration & user add
+@include('user.user_front.doctor')
+Admin:
+public -> admin template push in public (public\admin\assets)
+@include('admin.admin_backend.sidebar')
+resources\views\admin\admin_backend\navbar.blade.php -> profile & logout
+
+#=> Admin Gard
+app\Http\Kernel.php -> 'isAdmin' => \App\Http\Middleware\AdminMiddleware::class,
+app\Http\Middleware\AdminMiddleware.php
+web -> Route::middleware(['auth', 'isAdmin'])->group(function(){  });
+
+#=> Email Verification
+app\Models\User.php -> MustVerifyEmail
+config\fortify.php ->  Features::emailVerification(),
+.env
+google -> email-> security -> Less secure app access - On
+web -> Route::get('/home',[HomeController::class,'redirect'])->middleware('auth','verified');
+
+#=> Send Email Notification
+views\admin\show_appointments.blade.php
+web -> email_view
+Controllers\AdminController.php -> email_view
+views\admin\email_view.blade.php
+php artisan notifications:table  -> database\migrations\2022_01_09_111955_create_notifications_table.php
+php artisan migrate
+php artisan make:notification SendEmailNotification
+app\Notifications\SendEmailNotification.php
+web -> send_email
+app\Http\Controllers\AdminController.php -> send_email
+.env -> From Hospital
+google -> email-> security -> Less secure app access - On
+app\Models\Appointment.php
+
+

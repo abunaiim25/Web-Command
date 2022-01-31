@@ -1,0 +1,243 @@
+#cmd
+php -v
+composer -v
+composer create-project laravel/laravel eshop
+cd eshop
+php artisan --version
+#VS code
+cd example-app
+php artisan serve
+
+/*
+#DROP TABLE hi --->table delete form database
+#php artisan migrate:refresh--->refresh database
+php artisan migrate:reset ---->All deleted from database---php artisan migrate
+#php artisan migrate:rollback, php artisan migrate--->after change migration
+
+#multipal image upload---composer require intervention/image
+--config\app.php--- Intervention\Image\ImageServiceProvider::class,-- 'Image' => Intervention\Image\Facades\Image::class,
+--php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
+*/
+
+#
+--env--DB_DATABASE=eshop(phpmyadmin)
+--AppServiceProvider ----use Illuminate\Support\Facades\Schema; Schema::defaultStringLength(191);
+
+
+#auth
+-- composer require laravel/ui --dev
+-- php artisan ui vue --auth
+--create frontend->boostrap5,css,js 
+--layout->app.blade.php->link-css,js 
+--auth --->add in phpmyadmin
+--php artisan migrate
+--login logout --bootstrap dropdown add
+
+
+#admin panel
+--phpmyadmin---eshop---users---- after password
+--migrations --- create user table
+--$table->tinyInteger('role_as')->default('0'); //Add in UserTable before timestamps
+--create ---phpmyadmin---eshop---users---- after password---table---tinyInteger('role_as')->default('0')
+--php artisan make:middleware AdminMiddleware
+--AdminMiddleware work
+--kernel.php ---add AdminMiddleware 
+--Controllers---Auth--LoginController.php
+--routes--web---Route
+--phpmyadmin--user---rote_as=1
+
+
+#admin-template= 
+--creative tim free admin templates bootstrap---downlode
+--admin.blade.php create
+--create -->public-admin-css-material-dashboard.css----from admin tamplate
+--create-->layout--inc--sidebar.blade.php  & adminnav.blade.php  &  adminfooter.blade.php
+--create -->public-admin-js-    Write js from admin tamplate
+--create --->admin--index.blade.php
+--views-admin-index.blade.php----return view('admin.index');
+--adminnav.blade.php---dashboard logout---work
+
+
+#Catagries admin
+--php artisan make:Migration create_categories_table-----work
+--php artisan migrate------and go to phpmyadmin categories
+--controller use for database control----php artisan make:Controller Admin/CategoryController
+--resources\views\admin\category\----index.blade.php
+--php artisan make:Controller Admin/FrontendController
+--change web.PHP
+--app\Providers\RouteServiceProvider.php----change---delete comment
+--sidebar--categories
+--php artisan make:model Category------app\Models\Category.php
+--web and CategoryController ----work
+--create--views\admin\category\add.blade.php
+
+
+#Fetch Category data
+--Controllers\Admin\CategoryController.php--- $category = Category::all();//category model add
+--phpmyadmin---category--structure--after popular---image data add
+--create--Models\Category.php
+--resources\views\admin\category\index.blade.php
+
+
+#button edit
+--resources\views\admin\category\index.blade.php
+--use App\Http\Controllers\Admin\CategoryController;---edit-prod
+--resources\views\admin\category\edit.blade.php-----create
+--web.php and CategoryController ----editUpload
+
+
+#button delete
+--web.php and CategoryController category----destory
+
+#Alert
+ <!--https://sweetalert.js.org/guides/-->
+
+#Active nav
+--sidenav--- {{ Request::is('dashboard') ? 'active':'' }}
+
+
+#Product table--->products && Add Products
+--php artisan make:migration create_products_table 
+--2021_10_11_163600_create_products_table.php
+--views\layouts\inc\sidebar.blade.php
+--php artisan make:controller Admin/ProductController
+--product--index -------create
+--resources\views\admin\product\add.blade.php
+--custom.css
+--web.php---add-products, insert-products
+--Admin/ProductController----work
+
+
+#Fetch product data
+
+#edit and delete  product
+
+# make navbar and slider
+--views\layouts\front.blade.php---create
+--views\frontend\include.blade.php
+--Controllers\frontend\FrontendController.php---- php artisan make:controller frontend/FrontendController
+--web.php
+--views\layouts\inc\frontnavbar.blade.php
+--views\layouts\inc\frontslider.blade.php
+
+
+#integrate owl carousel in laravel | Fetch the featured products
+--frontendController
+--resources\views\frontend\index.blade.php
+--layouts\front.blade.php--<!--Own Carouse-->
+--views\frontend\index.blade.php---work
+or/but not working
+--https://owlcarousel2.github.io/OwlCarousel2/----Owl Carousel 2 download
+--owl.carousel.min.css--owl.theme.default.min.css
+--owl.carousel.min.js
+
+--https://code.jquery.com/
+--https://code.jquery.com/jquery-3.6.0.min.js----jquery-3.6.0.min.js
+
+
+#How to show trending category
+--views\layouts\front.blade.php
+--frontnavbar
+--nav login logout
+--web.php
+--frontend----Controller
+--Frontend\FrontendController.php-----featured_products,$trending_category
+
+
+#How to fetch products by category
+--views\frontend\category.blade.php
+--web.php---view-category/{slug}
+--Controllers\Frontend\FrontendController.php
+--views\frontend\products\index.blade.php
+
+#How to display product details 
+--views\frontend\products\index.blade.php
+--web.php--productview
+--FrontendController.php----productview
+--views\frontend\products\view.blade.php
+
+# quantity increment or decrement
+--views\frontend\products\view.blade.php
+
+
+#How to make add to cart
+-- php artisan make:migration create_carts_table
+-- 2021_10_23_153057_create_carts_table
+-- php artisan migrate
+-- php artisan make:model Cart
+-- php artisan make:controller Frontend/CartController
+-- views\frontend\products\view.blade.php
+-- public\frontend\js\custom.js
+
+# Display Cart items and remove items 
+--fontnav-cart
+--web.php
+--CartController
+--cart.blade.php
+--cart model
+--public\frontend\js\custom.js
+--web.php--deleteCart
+
+# Calculate the cart total price
+--cart.blade.php--@php  $total = 0;  @endphp
+--web.php--updateCart
+--CartController--updateCart
+
+
+# How to make Checkout page
+--php artisan make:controller Frontend/CheckoutController
+--Frontend/CheckoutController---index
+--views\frontend\checkout.blade.php
+--web.php---checkout
+--phpmyadmin--add 8 columns after password
+--lname,phone,address1,address2,city,state,country,pincode
+
+#How to check stock availability
+--when phpmyadmin --qty=0 ---then outof stock
+
+#Checkout and Place order
+--views\frontend\checkout.blade.php
+--web.php---place-order
+--Frontend/CheckoutController---placeorder
+--php artisan make:migration create_orders_table
+--php artisan make:migration create_order_items_table
+-- php artisan make:model Order
+--php artisan make:model OrderItems
+--web.php--place-order
+--Frontend/CheckoutController---placeorder
+--add ---  total_price
+
+#Show Orders and order details in user dashboard 
+--php artisan make:controller Frontend/UserController
+--web.php--my-orders
+--app\Models\Order.php---orderitems
+----web.php--view-order
+--views\frontend\orders\view.blade.php
+--Order.model----orderitems
+--OrderItems.model---products
+
+#Show Orders and view order details in admin dashboard
+--web.php--users,
+--web.php--orders
+--php artisan make:controller Admin/OrderController
+--views\admin\orders\index.blade.php
+--views\admin\orders\view.blade.php
+--views\admin\orders\history.blade.php
+
+#Show registered users and view user details in Admin Dashboard
+--php artisan make:controller Admin/DashboardController
+--views\admin\users\index.blade.php
+--views\admin\users\view.blade.php
+
+#Add products to Wishlist | Add to cart and remove items from wishlist
+--php artisan make:controller Frontend/WishlistController
+--php artisan make:model Wishlist -m
+--php artisan migrate
+
+# Razorpay payment gateway integration
+--views\frontend\checkout.blade.php
+
+#Product Rating
+--views\frontend\products\view.blade.php
+--php artisan make:model Rating -m
+--php artisan make:controller Frontend/RatingController
