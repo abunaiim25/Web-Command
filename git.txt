@@ -1,0 +1,116 @@
+git --version
+control + L  ->clear
+
+git config 
+git config --global user.name "abu-naiim"  ->add
+git config --global user.email "naiimabu25@gmail.com"  ->add
+git config --global user.name "naiim"  ->change 
+git config --list
+git config user.name  ->seen 
+git config user.email  ->seen 
+
+pwd  ->where
+ls  ->all folder
+cd git
+cd ..
+
+
+==>Working directory
+mkdir notes
+ls
+cd git
+ls
+
+git init  ->start 
+ls -a  ->hidden file open
+
+->create new txt (works page)
+touch day1.txt  
+open day1.txt
+git status
+touch day2.txt
+open day2.txt
+git status
+
+
+==>Working directory to *Stagging area
+git add day1.txt  
+git add .
+git status
+
+->day2.txt after modifed
+git add day2.txt
+git status
+
+git restore day1.txt  ->becoming like before
+
+git rm --cached day1.txt  ->remove/unstage
+git status
+
+git checkout day1.txt  -> undo
+
+-->where change data
+git diff
+git status
+
+
+==>Stagging area to *Local repository
+git commit -m "day data is added"  ->commit
+git log  -> commit details
+git log --oneline   -> (23406b8 ->id) details 
+//or 
+git add . && git commit -m "day4 datais added"  ->commit
+
+
+==> Uncommit
+git reset -soft HEAD^  -> Local repository to Stagging area
+git reset HEAD^  -> Local repository to Working directory
+git reset --hard HEAD^  -> deleted last commit (day4.txt deleted and go to day3.txt )
+
+git reset -soft HEAD-2
+git reset -soft HEAD-3
+
+
+git log --oneline   -> 41cda1b->id) details 
+git show 41cda1b
+git checkout day1.txt  -> undo
+git checkout 41cda1b -> undo
+git checkout master -> recent commit 
+git checkout 41cda1b -> only this is stay
+
+==> gitignore
+.env
+*.txt
+!story.txt
+node_modules/
+temp/git co
+
+==> README.md  -> push
+git init
+git add .
+git commit -m "readme template"
+git remote add origin https://github.com/abunaiim25/Readme-Tempalte.git
+git push -u origin master/main
+
+git remote add origin  -> when again push
+
+==> Worked many people (Local Repository connected on Remote Repository with clone)
+git init
+git remote ->connected or not connected
+git remote add origin https://github.com/abunaiim25/Readme-Tempalte.git  -> location add
+git remote
+git remote -v  -> where project
+//or
+==> Clone
+git init
+git clone https://github.com/abunaiim25/Maim-Project.git
+
+==> clone and after change
+git status
+git add .
+git commit -m "added"
+git push -u origin main
+
+==> after Change on Remote (add on remote to local)
+git log --online
+git pull

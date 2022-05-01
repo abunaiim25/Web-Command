@@ -1,0 +1,32 @@
+git status
+
+1==> Add Github:
+echo "# MobileShop-Laravel-web" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/abunaiim25/MobileShop-Laravel-web.git
+git push -u origin main
+
+
+2==> After modifed:
+git add .
+git commit -m "first commit"
+git remote add origin 
+git push -u origin main/master  //  git push
+
+
+3.1==> Clone
+git init
+git clone https://github.com/abunaiim25/Maim-Project.git
+
+3.2==> clone and after change
+git status
+git add .
+git commit -m "added"
+git push -u origin main
+
+3.3==> after Change on Remote (add on remote to local)
+git log --online
+git pull
