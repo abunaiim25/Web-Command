@@ -1,0 +1,18 @@
+php artisan vendor:publish --tag=jetstream-views
+
+=> login design
+resources\views\vendor\jetstream\components\authentication-card-logo.blade.php 
+resources\views\vendor\jetstream\components\application-mark.blade.php
+
+=> profile
+resources\views\profile\update-profile-information-form.blade.php
+
+//=============================================================================
+
+laravel --version
+composer global update   =>update global
+laravel new l8 --jet --dev  => [0] livewire  => yes
+
+
+config\jetstream.php  n-> profile
+config\fortify.php
