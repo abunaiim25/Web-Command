@@ -1,4 +1,4 @@
-git status
+git status:
 
 1==> Add Github:
 echo "# MobileShop-Laravel-web" >> README.md
@@ -30,3 +30,16 @@ git push -u origin main
 3.3==> after Change on Remote (add on remote to local)
 git log --online
 git pull
+
+4==>  fork & clone - contribute on others project:
+fork
+clone and modify
+
+git add .
+git commit -m "first commit"
+git push
+
+
+profile:
+https://rahuldkjain.github.io/gh-profile-readme-generator/
+https://arturssmirnovs.github.io/github-profile-readme-generator/
