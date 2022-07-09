@@ -1,0 +1,104 @@
+==>Extensions:
+Material Icon Theme
+prettin
+auto rename tag
+live server
+live server Preview => show live server preview
+css peak
+IntelliSense for CSS class names in HTML
+HTML CSS Support
+Material Theme
+[Deprecated] Bracket Pair Colorizer 2
+Code Runner
+
+(PHP):
+PHP Intelephense
+PHP IntelliSense
+phpfmt - PHP formatter
+PHP Namespace Resolver
+PHP Debug
+PHP Getters & Setters
+PHP Serve
+SQl Server Client(mssql)
+
+(Laravel):
+Laravel Blade Snippets
+Laravel Snippets
+Laravel Blade Spacer
+Laravel Extra Intellisense
+Laravel Artisan
+Laravel Goto Controller
+ENV
+
+(React):
+ES7 React/Redux/GraphQL/React-Native snippets
+
+(Python):
+Python
+
+
+==>settings:
+Format On Save
+prettier: Print Width
+Word Wrap
+Auto Save
+
+
+==>Keyboard:
+shift+ alt+ down arow + mouse =>copy& past
+
+
+==>Search Command palette...
+(bootstrap) settings.json =>  "css.remoteStyleSheets": ["https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"]
+
+(react) settings.json => "emmet.includeLanguages": {"javascript": "javascriptreact"},
+
+(laravel) settings.json =>
+  "emmet.triggerExpansionOnTab": true,
+  "blade.format.enable": true, 
+  "[blade]": {
+        "editor.autoClosingBrackets": "always",
+    },
+
+
+
+
+settings.json:
+
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": -1,
+  "files.associations": {
+    "*.php": "php"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.printWidth": 120,
+  "editor.wordWrap": "on",
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "emmet.triggerExpansionOnTab": true,
+  "blade.format.enable": true,
+  "[blade]": {
+    "editor.autoClosingBrackets": "always"
+  },
+  "files.autoSaveDelay": 1,
+  "css.remoteStyleSheets": [
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  ],
+  "workbench.colorTheme": "Material Theme Ocean High Contrast"
+}
+

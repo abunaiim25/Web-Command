@@ -27,3 +27,25 @@ index.js => import "font-awesome/css/font-awesome.min.css";
 
 https://app.netlify.com/drop :
 npm run build
+for github:
+Build command: CI= yarn build
+Publish directory: build/
+
+React Router: (https://reactrouter.com/docs/en/v6/getting-started/installation)
+npm install react-router-dom@6
+
+React EmailJs:
+npm install @emailjs/browser --save
+
+Messanmer:
+npm install react-messenger-customer-chat
+ pageId="107276032014225"  => fb page id
+        appId="390414809715969"   => https://developers.facebook.com/apps/?show_reminder=true
+advance massaging: https://abu-naiim.netlify.app/
+
+Notification message:
+ =>https://www.npmjs.com/package/react-toastify
+ npm install --save react-toastify
+
+
+

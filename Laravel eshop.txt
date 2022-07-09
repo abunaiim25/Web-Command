@@ -19,6 +19,14 @@ php artisan migrate:reset ---->All deleted from database---php artisan migrate
 --php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
 */
 
+user create ==>
+php artisan tinker
+$user = new User()
+$user->name = "Naiim"
+$user->email = "naiimabu25@gmail.com"
+$user->password = Hash::make("12345")
+$user->save()
+
 #
 --env--DB_DATABASE=eshop(phpmyadmin)
 --AppServiceProvider ----use Illuminate\Support\Facades\Schema; Schema::defaultStringLength(191);

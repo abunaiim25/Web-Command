@@ -1,0 +1,36 @@
+==========Laravel========== 
+run App =>
+npm install 
+npm run dev    => webpack.mix.js =>mix.disableNotifications()  //if npm not working
+or/
+npm run watch  / php artisan serve
+
+if react-router-dom not working =>
+npm uninstall react-router-dom/npm install react-router-dom
+npm install react-router-dom@5.3.0
+
+C:\Users\naiim\AppData\Local\Microsoft\Windows\Notifications
+
+cmd (project start)=>
+composer create-project laravel/laravel MyTask
+cd myTask
+
+composer require laravel/ui
+
+php artisan ui bootstrap
+npm install (node.Js will be install)
+npm run dev (if error, 2 times run)
+
+php artisan ui react
+npm install (node.Js will be install)
+npm run dev (if error, 2 times run)
+code .
+
+auth:
+php artisan ui bootstrap --auth
+php artisan ui react --auth   => yes all
+npm install 
+npm run dev
+
+resources\js\components ---> create App.js -> layouts\app.blade.php -> web(app /)
+MyTask\.babelrc

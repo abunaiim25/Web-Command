@@ -1,0 +1,52 @@
+=>Bootstrap: 
+npm install bootstrap@5.2.0-beta1
+import 'bootstrap/dist/css/bootstrap.min.css'; =>index.js
+import 'bootstrap/dist/js/bootstrap.bundle.jss'; =>index.js
+=>Route:
+if react-router-dom not working =>
+npm install react-router-dom
+npm install react-router-dom@5.3.0
+===================================================================
+
+npx create-react-app my-app
+admin create
+npm install sweetalert --save/import swal from 'sweetalert';
+
+composer create-project laravel/laravel example-app
+.env -> DB create
+Providers\AppServiceProvider.php -> Schema::defaultStringLength(191);
+===================================================================
+
+Register/Login/Logout:
+Register.js/Login.js/NavBar.js->Logout
+react: npm install axios   -> for api
+App.js => axios.defaults.withCredentials = true; // some work
+
+Laravel: 
+-- composer require laravel/ui --dev
+-- php artisan ui vue --auth
+-- php artisan ui bootstrap
+
+composer require laravel/sanctum   -> https://laravel.com/docs/9.x/sanctum
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+php artisan migrate
+app\Http\Kernel.php 
+app\Models\User.php -> HasApiTokens
+route: api (register/Login/logout)
+Controllers\API\AuthController.php => (register/Login/logout)
+config\cors.php => 'supports_credentials' => true,
+Middleware\VerifyCsrfToken.php'    ->api/*'
+src\AdminPrivateRoute.js  => private/protected route
+role_as create on database
+ApiAdminMiddleware.php
+app\Http\Kernel.php => isApiAdmin
+(Database personal_access_tokens=> [""]=users 
+========================================================================
+Loading:
+npm install react-loading-skeleton
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+App.js-> 
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+<SkeletonTheme baseColor="#202020" highlightColor="#444">
+</SkeletonTheme>
