@@ -1,0 +1,14 @@
+https://www.itsolutionstuff.com/post/laravel-9-send-mail-using-gmail-smtp-serverexample.html
+
+Crome Password 2 fector varification:
+ gunuasjurrfzwzpr (env => MAIL_PASSWORD=gunuasjurrfzwzpr)
+
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=naiimabu25@gmail.com
+MAIL_PASSWORD=gunuasjurrfzwzpr
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=naiimabu25@gmail.com
+MAIL_FROM_NAME="${APP_NAME}"

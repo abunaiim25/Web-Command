@@ -10,7 +10,7 @@ php artisan serve
 
 /*
 #DROP TABLE hi --->table delete form database
-#php artisan migrate:refresh--->refresh database
+#php artisan migrate:refresh--->refresh database -> delete data
 php artisan migrate:reset ---->All deleted from database---php artisan migrate
 #php artisan migrate:rollback, php artisan migrate--->after change migration
 

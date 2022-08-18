@@ -41,6 +41,14 @@ role_as create on database
 ApiAdminMiddleware.php
 app\Http\Kernel.php => isApiAdmin
 (Database personal_access_tokens=> [""]=users 
+
+NewPassword:
+User.php -> sendPasswordResetNotification
+AuthController.php
+php artisan make:notification ResetPasswordNotification
+app\Notifications\ResetPasswordNotification.php
+env->MAIL_MAILER
+route->forget and reset password
 ========================================================================
 Loading:
 npm install react-loading-skeleton
@@ -50,3 +58,6 @@ App.js->
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 <SkeletonTheme baseColor="#202020" highlightColor="#444">
 </SkeletonTheme>
+
+or:
+npm install --save react-spinners

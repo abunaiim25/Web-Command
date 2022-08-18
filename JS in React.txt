@@ -1,0 +1,18 @@
+import React from 'react'
+
+const AdminLayout = () => {
+
+  function alertIt(){
+    alert("hi")
+  }
+
+  return (
+    <>
+              <button onClick={alertIt}>Alert</button>
+    </>
+  )
+}
+
+export default AdminLayout
+
+

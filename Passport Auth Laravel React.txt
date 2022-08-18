@@ -1,0 +1,53 @@
+WEBSITE: https://laravel.com/docs/9.x/passport#main-content
+
+SETUP:
+composer require laravel/passport
+app\Providers\AppServiceProvider.php ->  Schema::defaultStringLength(191);
+migrations\2014_10_12_000000_create_users_table.php => if any table add
+migrations\2014_10_12_100000_create_password_resets_table.php -> id add
+php artisan migrate
+php artisan passport:install
+.env => add client id
+app\Models\User.php -> if not arranged, I arrange this
+database\factories\UserFactory.php -> if not arranged, I arrange this
+app\Providers\AuthServiceProvider.php
+config\auth.php
+
+WORKED:
+AuthController.php
+routes\api.php
+/*
+For Register => Lagba na ata 
+php artisan make:request RegisterRequest -> app\Http\Requests\RegisterRequest.php
+*/
+//===========================CHANGE PASSWORD=============================
+Forget Password:
+create => https://mailtrap.io/inboxes => for .env => (sob mail ai websit a thaka)
+.env -> MAIL_MAILER
+ForgetController
+php artisan make:request ForgetRequest -> ForgetRequest
+php artisan make:mail ForgetMail -> app\Mail\ForgetMail.php
+resources\views\mail\forget.blade.php  (edit when live server)
+
+RESET PASSWORD:
+php artisan make:request ResetRequest
+ForgetController
+
+
+//=======================================================================
+SETUP:
+composer require laravel/passport
+app\Providers\AppServiceProvider.php ->  Schema::defaultStringLength(191);
+migrations\2014_10_12_000000_create_users_table.php => if any table add
+migrations\2014_10_12_100000_create_password_resets_table.php -> id add
+php artisan migrate
+php artisan passport:install
+.env => add client id
+app\Models\User.php -> if not arranged, I arrange this
+database\factories\UserFactory.php -> if not arranged, I arrange this
+app\Providers\AuthServiceProvider.php
+config\auth.php
+php artisan make:seeder UsersTableSeeder 
+database\seeders\UsersTableSeeder.php
+database\seeders\DatabaseSeeder.php
+php artisan db:seed
