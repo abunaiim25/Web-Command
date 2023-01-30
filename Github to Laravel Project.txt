@@ -1,9 +1,0 @@
-composer upgrade
-php artisan key:generate
-
-
-
-================================
-composer install
-php artisan migrate
-php artisan serve

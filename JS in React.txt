@@ -9,6 +9,8 @@ const AdminLayout = () => {
   return (
     <>
               <button onClick={alertIt}>Alert</button>
+              or
+              <button onClick={window['alertIt']}>Alert</button>//for JS page
     </>
   )
 }
@@ -16,3 +18,10 @@ const AdminLayout = () => {
 export default AdminLayout
 
 
+
+onChange={preview} => components\frontend\CreatePostModal\CreatePost.js 
+onClick={window['hideShow3']} => components\frontend\Auth\Login.js
+
+  useEffect(() => {
+    const signUpButton = document.getElementById('signUpMobile');
+  }, [])

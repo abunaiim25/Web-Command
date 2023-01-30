@@ -23,6 +23,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; =>index.js
 
 JQuery:
 npm install jquery --save
+import $ from 'jquery';
 
 FontAwesome:
 npm install --save font-awesome
@@ -36,6 +37,8 @@ Publish directory: build/
 
 React Router: (https://reactrouter.com/docs/en/v6/getting-started/installation)
 npm install react-router-dom@6
+or
+npm add react-router-dom (It's working best)
 
 React EmailJs:
 npm install @emailjs/browser --save
@@ -50,5 +53,14 @@ Notification message:
  =>https://www.npmjs.com/package/react-toastify
  npm install --save react-toastify
 
+Video Player:
+npm i react-video-js-player
+
+SASS:
+npm add sass
+
+Firebase:
+npm add firebase
+src\firebase.js (from Firebase)
 
 

@@ -1,6 +1,6 @@
 ==>Extensions:
 Material Icon Theme
-prettin
+prettier
 auto rename tag
 live server
 live server Preview => show live server preview

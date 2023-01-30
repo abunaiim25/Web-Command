@@ -19,13 +19,16 @@ npm install laravel-mix@latest --save-dev
 npm run dev
 database\migrations\2014_10_12_000000_create_users_table.php
 migrate
+.env
+php artisan migrate
 app\Actions\Fortify\CreateNewUser.php
 app\Models\User.php
+app\Providers\AppServiceProvider.php
 app\Providers\RouteServiceProvider.php -> public const HOME = '/home';
 route -> Route::get('/home',[HomeController::class,'redirect']);
 app\Http\Controllers\HomeController.php
 resources\views\dashboard.blade.php
-resources\views\admin\home.blade.php
+resources\views\admin\home.blade.php  or (index.blade.php)
 resources\views\navigation-menu.blade.php
 resources\views\layouts\app.blade.php
 

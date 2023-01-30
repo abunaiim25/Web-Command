@@ -1,0 +1,18 @@
+composer upgrade
+php artisan key:generate
+php artisan config:cache
+or================================
+composer install
+php artisan migrate
+php artisan serve
+
+================================
+Vite manifest not found at: C:\xampp\htdocs\Laravel Project\Shopno Enterprise\shop\public\build/manifest.json (Problem)
+npm install --save-dev vite laravel-vite-plugin
+npm install --save-dev @vitejs/plugin-vue
+npm run build
+
+
+
+React:
+npm install

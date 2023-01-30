@@ -8,6 +8,12 @@ php artisan --version
 cd example-app
 php artisan serve
 
+if any problem:
+php artisan cache:clear
+php artisan route:clear
+php artisan config:clear
+php artisan view:clear
+
 /*
 #DROP TABLE hi --->table delete form database
 #php artisan migrate:refresh--->refresh database -> delete data
@@ -35,6 +41,8 @@ $user->save()
 #auth
 -- composer require laravel/ui --dev
 -- php artisan ui vue --auth
+-- npm install
+-- npm run dev
 --create frontend->boostrap5,css,js 
 --layout->app.blade.php->link-css,js 
 --auth --->add in phpmyadmin
