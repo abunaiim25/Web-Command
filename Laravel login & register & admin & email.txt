@@ -49,6 +49,10 @@ app\Http\Kernel.php -> 'isAdmin' => \App\Http\Middleware\AdminMiddleware::class,
 app\Http\Middleware\AdminMiddleware.php
 web -> Route::middleware(['auth', 'isAdmin'])->group(function(){  });
 
+
+
+
+
 #=> Email Verification
 app\Models\User.php -> MustVerifyEmail
 config\fortify.php ->  Features::emailVerification(),

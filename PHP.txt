@@ -1,0 +1,5 @@
+Step:
+1. index
+2. admin - Template 
+3. frontend - include/assets/auth
+4. Database

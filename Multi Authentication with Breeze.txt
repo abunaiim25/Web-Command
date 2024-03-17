@@ -1,0 +1,80 @@
+@Source: https://www.youtube.com/watch?v=bkq83g4tXEg&list=PL38wJGzpQu7PAvpOpoEaWEMuCK-SORjgK&index=5
+
+STEP 1:
+composer create-project laravel/laravel project_name
+composer create-project laravel/laravel:^10.* project_name
+
+# create database on mysql
+# code open
+# .env add DB name
+# config\database.php ->change (utf8mb4_unicode_ci, mysql)
+
+php artisan serve
+(if problem -> php artisan migrate)
+
+
+***** Breeze and Blade *****
+
+STEP 2:
+composer require laravel/breeze --dev
+php artisan breeze:install
+ 
+php artisan migrate
+npm install
+npm run dev
+
+STEP 3:
+database\migrations\0001_01_01_000000_create_users_table.php
+php artisan migrate:fresh -> regenarate table
+
+STEP 4:
+php artisan make:seeder UserSeeder
+database\seeders\UserSeeder.php
+database\seeders\DatabaseSeeder.php
+php artisan db:seed
+
+STEP 5:
+resources\views\admin\dashboard.blade.php
+resources\views\vendor\dashboard.blade.php
+
+php artisan make:controller AdminPanel/AdminController
+php artisan make:controller VendorPanel/VendorController
+
+app\Http\Controllers\AdminPanel\AdminController.php
+app\Http\Controllers\VendorPanel\VendorController.php
+
+STEP 6:
+php artisan make:middleware RoleMiddleware
+app\Http\Middleware\RoleMiddleware.php
+app\Http\Kernel.php
+routes\web.php
+
+STEP 7: redidect (admin/vendor)
+app\Http\Controllers\Auth\AuthenticatedSessionController.php
+
+STEP 8: MustVerifyEmail
+app\Models\User.php
+mailtrap: https://mailtrap.io/inboxes/1834212/messages (website)
+.env
+
+STEP 9: Role(vendor, customer)
+resources\views\auth\register.blade.php
+app\Models\User.php -> guarded
+app\Http\Controllers\Auth\RegisteredUserController.php -> role
+
+STEP 10: status inactive to active
+app\Http\Controllers\Auth\VerifyEmailController.php
+
+STEP 11: redirect (admin/vendor/customer) 
+php artisan make:controller CustomerPanel/CustomerCuntroller
+app\Http\Controllers\CustomerPanel\CustomerController.php
+routes\web.php
+
+***** Main Work *****
+STEP 12: Template/Design
+resources\views -> make many blade file
+resources\views\customer\index.blade.php
+
+app\Http\Controllers\CustomerPanel\CustomerController.php -> route('customer.index')
+routes\web.phpc-> name('customer.index')
+

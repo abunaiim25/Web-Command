@@ -1,0 +1,55 @@
+@source youtube: https://www.youtube.com/watch?v=LiMT6vFtcmU
+@Source Link: https://devnotez.com/laravel-admin-user-login-multi-auth-in-laravel-10/
+
+
+*** Step One – Create a Fresh Laravel Project ***
+composer create-project laravel/laravel multiauth
+cd multiauth
+php artisan serve
+
+
+*** Step Two – Install Breeze Authentication System ***
+composer require laravel/breeze --dev
+php artisan breeze:install blade
+
+# create database on mysql
+# code open
+# .env add DB name
+# config\database.php ->change (utf8mb4_unicode_ci, mysql)
+
+php artisan migrate
+npm install
+npm run dev
+
+
+*** Step Three – Create model and migration for admin ***
+php artisan make:model Admin -m
+
+
+*** Step Four – Go to admin migration file and add this column to your table ***
+# migrations\2024_03_14_094814_create_admins_table.php
+
+
+*** Step Five – Go to Admin model file and replace the code with it ***
+# app\Models\Admin.php 
+
+
+*** Step Six – Also add this protected guard name to Admin model ***
+# app\Models\Admin.php -> protected $guard = 'admin';
+# config\auth.php -> admin add
+
+
+*** Step Seven – Now run the migration for adding admin table to our database ***
+php artisan migrate
+
+
+*** Step Eight – Create AdminAuth and change all the AdminAuth files namespace ***
+# Http\Controllers\AdminAuth -> Create AdminAuth
+
+
+*** Step Nine – AuthenticatedSessionController, RouteServiceProvider,  admin.auth.login ***
+# app\Http\Controllers\AdminAuth\AuthenticatedSessionController.php -> add
+# resources\views\admin\auth -> (auth copy)
+# app\Providers\RouteServiceProvider.php -> add
+# app\Http\Requests\AdminAuth -> (auth copy)
+# app\Http\Requests\AdminAuth\LoginRequest.php -> change Auth to AdminAuth and authenticate

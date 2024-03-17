@@ -36,6 +36,13 @@ ES7 React/Redux/GraphQL/React-Native snippets
 (Python):
 Python
 
+Machine Learning:
+Python Extension Pack
+Pylance
+jupyter
+settings => jupyter sen to (checked)
+codesnap
+path Intellisense
 
 ==>settings:
 Format On Save

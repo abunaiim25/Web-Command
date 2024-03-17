@@ -1,0 +1,17 @@
+composer update
+composer.json -> copy form laravel 9
+composer update
+app\Exceptions\Handler.php
+composer update
+app\Http\Middleware\TrustProxies.php
+delete -> config\TrustProxies.php
+config\app.php
+
+
+
+composer require laravel/ui
+php artisan ui:auth
+php artisan ui bootstrap
+npm install
+npm run dev
+npm run build

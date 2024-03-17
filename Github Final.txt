@@ -11,6 +11,13 @@ git branch -M main
 git remote add origin https://github.com/abunaiim25/MobileShop-Laravel-web.git
 git push -u origin main
 
+large file:
+git init
+git lfs install
+git lfs track "*predictor"
+git add .gitattributes
+git add .
+git commit -m "first commit"
 
 2==> After modifed:
 git add .

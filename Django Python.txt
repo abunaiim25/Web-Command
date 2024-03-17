@@ -1,0 +1,97 @@
+Environment =>
+Python download and environment setup
+python -m pip install --upgrade pip   (https://www.youtube.com/watch?v=sd8aebmU4BU&list=PL-83IWJl8Qht1OmhiEnRw8H8ieKAjucNN&index=2)
+pip --version (before pip env setup: https://www.youtube.com/watch?v=PikcUT-ts7E)
+python --version
+
+VS Code Extension=>
+Python
+Pylance
+Jinja
+
+Terminal on=>
+Ctrl+Shift+P
+python interpreter
+Enter interpreter path
+python.exe (select=https://www.youtube.com/watch?v=MSKGOK-T3Dg&list=PL-83IWJl8Qht1OmhiEnRw8H8ieKAjucNN&index=3)
+if terminal problem, if no problem, not use this: 
+set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Get-ExecutionPolicy
+Get-ExecutionPolicy -list
+
+
+Django Project(cmd)=>
+pip install virtualenv
+python -m venv myenv
+myenv\Scripts\activate
+pip install django   
+django-admin
+django-admin --version
+django-admin startproject nongarehub
+cd nongarehub
+python manage.py startapp app
+python manage.py runserver (local server on)
+
+DB mysql:
+pip install mysqlclient (if not installed)
+Python Django\Ecommerce\ecommerce\ecommerce\settings.py   => mysql
+
+Project Start Now Here:
+Django Project\nongarehub\myapp\views.py
+Django Project\nongarehub\myapp\urls.py
+Django Project\nongarehub\nongarehub\urls.py
+Django Project\nongarehub\nongarehub\settings.py   => myapp
+cd nongarehub
+python manage.py runserver
+
+Django Project\nongarehub\nongarehub\templates
+Django Project\nongarehub\nongarehub\settings.py   => templates
+
+this is another project.
+Portfolio\myportfolio\static
+Portfolio\myportfolio\myportfolio\settings.py    => static(css,js)
+
+Database => model.py
+Ecommerce\ecommerce\store\models.py
+Ecommerce\ecommerce\ecommerce\settings.py => images
+Ecommerce\ecommerce\store\admin.py
+python manage.py makemigrations (if problem: pip install Pillow)
+python manage.py migrate
+Admin:
+python manage.py createsuperuser  => admin show
+pip install django-jazzmin
+Ecommerce\ecommerce\ecommerce\settings.py  => jazzmin
+Ecommerce\ecommerce\store\views.py
+
+Get images from database: (add images)
+Ecommerce\ecommerce\ecommerce\urls.py
+
+Auth:
+Ecommerce\ecommerce\store\controller\authview.py
+Ecommerce\ecommerce\store\urls.py
+Ecommerce\ecommerce\templates\store\auth\register.html
+Ecommerce\ecommerce\store\froms.py
+Ecommerce\ecommerce\store\models.py
+Ecommerce\ecommerce\templates\store\auth\login.html
+Ecommerce\ecommerce\templates\store\inc\navbar.html
+
+Cart:
+Ecommerce\ecommerce\templates\store\products\view.html
+Ecommerce\ecommerce\store\models.py
+Ecommerce\ecommerce\store\admin.py
+python manage.py makemigrations
+python manage.py migrate
+Ecommerce\ecommerce\static\js\jquery.js
+Ecommerce\ecommerce\store\urls.py
+Ecommerce\ecommerce\store\controller\cartview.py
+Ecommerce\ecommerce\templates\store\inc\navbar.html
+Ecommerce\ecommerce\store\urls.py
+
+
+Machine Learning:
+pip install sklearn / pip install -U scikit-learn
+pip install pandas
+pip install matplotlib
+pip install numpy
+pip install seaborn
+python -m pip install -U matplotlib
